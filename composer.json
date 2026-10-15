@@ -1,0 +1,40 @@
+{
+  "name": "iaexplore/iaexplore-llm-profiler",
+  "description": "Deterministic high-precision VRAM, GQA KV-Cache, MoE memory bandwidth, and llama.cpp layer offloading profiler for 2026 AI models and silicon.",
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://www.iaexplore.com/",
+  "authors": [
+    {
+      "name": "IAExplore AI Infrastructure Research",
+      "email": "engineering@iaexplore.com",
+      "homepage": "https://www.iaexplore.com/"
+    }
+  ],
+  "support": {
+    "docs": "https://www.iaexplore.com/html/en/blog/ai/npu-tpu-gpu-ai-hardware-guide.html",
+    "source": "https://github.com/iaexplore/iaexplore-llm-profiler"
+  },
+  "keywords": [
+    "llm",
+    "vram",
+    "kv-cache",
+    "gqa",
+    "mixture-of-experts",
+    "llama-cpp",
+    "ollama",
+    "hardware-benchmarks",
+    "iaexplore"
+  ],
+  "require": {
+    "php": ">=8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "IAExplore\\LlmProfiler\\": "php/src/"
+    }
+  },
+  "bin": [
+    "php/bin/iaexplore-profiler"
+  ]
+}
