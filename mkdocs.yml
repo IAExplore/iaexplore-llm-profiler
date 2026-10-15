@@ -7,53 +7,13 @@ repo_name: iaexplore/iaexplore-llm-profiler
 
 theme:
   name: readthedocs
-  palette:
-    - scheme: slate
-      primary: indigo
-      accent: cyan
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-    - scheme: default
-      primary: indigo
-      accent: cyan
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-  features:
-    - navigation.instant
-    - navigation.tracking
-    - navigation.sections
-    - navigation.expand
-    - content.code.copy
-    - content.code.annotate
 
 markdown_extensions:
   - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.arithmatex:
-      generic: true
   - tables
   - attr_list
-  - md_in_html
-
-extra_javascript:
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
   - "Overview & Quickstart": index.md
   - "Mathematical Methodology": math-methodology.md
   - "2026 Hardware Benchmarks": hardware-benchmarks-2026.md
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/iaexplore/iaexplore-llm-profiler
-    - icon: fontawesome/solid/globe
-      link: https://www.iaexplore.com/
