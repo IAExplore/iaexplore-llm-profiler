@@ -5,7 +5,7 @@
   "main": "index.js",
   "types": "index.d.ts",
   "bin": {
-    "iaexplore-profiler": "./cli.js"
+    "iaexplore-profiler": "cli.js"
   },
   "scripts": {
     "test": "node cli.js --model llama-3.3-70b --hardware rtx-4090-24gb"
