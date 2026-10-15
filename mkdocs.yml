@@ -6,7 +6,7 @@ repo_url: https://github.com/iaexplore/iaexplore-llm-profiler
 repo_name: iaexplore/iaexplore-llm-profiler
 
 theme:
-  name: material
+  name: readthedocs
   palette:
     - scheme: slate
       primary: indigo
