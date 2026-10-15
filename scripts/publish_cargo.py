@@ -84,7 +84,7 @@ req = urllib.request.Request(
 
 try:
     with urllib.request.urlopen(req) as resp:
-        print("[✓] Successfully published to Crates.io:", resp.status, resp.read().decode())
+        print("[OK] Successfully published to Crates.io:", resp.status, resp.read().decode())
 except urllib.error.HTTPError as e:
     err_body = e.read().decode()
     print(f"[!] Crates.io API returned HTTP {e.code}: {err_body}")
