@@ -1,0 +1,44 @@
+{
+  "name": "iaexplore-llm-profiler",
+  "version": "1.0.0",
+  "description": "Deterministic high-precision VRAM, GQA KV-Cache, MoE memory bandwidth and llama.cpp layer offloading profiler for 2026 AI models and silicon.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "bin": {
+    "iaexplore-profiler": "./cli.js"
+  },
+  "scripts": {
+    "test": "node cli.js --model llama-3.3-70b --hardware rtx-4090-24gb"
+  },
+  "keywords": [
+    "llm",
+    "vram",
+    "kv-cache",
+    "gqa",
+    "mixture-of-experts",
+    "moe",
+    "llama-cpp",
+    "ollama",
+    "vllm",
+    "gpu-offload",
+    "rtx-5090",
+    "apple-silicon-m4",
+    "hardware-profiler",
+    "tokens-per-second",
+    "iaexplore"
+  ],
+  "author": "IAExplore AI Infrastructure Research <engineering@iaexplore.com> (https://www.iaexplore.com/)",
+  "license": "MIT",
+  "homepage": "https://www.iaexplore.com/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iaexplore/iaexplore-llm-profiler.git"
+  },
+  "bugs": {
+    "url": "https://www.iaexplore.com/html/en/blog/ai/npu-tpu-gpu-ai-hardware-guide.html"
+  },
+  "funding": "https://www.iaexplore.com/",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

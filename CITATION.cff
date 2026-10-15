@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use this software or its mathematical profiling models in your research, please cite it as below."
+authors:
+  - family-names: "Research & Systems Team"
+    given-names: "IAExplore"
+    affiliation: "IAExplore AI Infrastructure Laboratories"
+    website: "https://www.iaexplore.com/"
+title: "iaexplore-llm-profiler: High-Precision VRAM, GQA KV-Cache, MoE Memory Bandwidth & GPU Offload Deterministic Profiler"
+version: 1.0.0
+doi: 10.5281/zenodo.14889210
+date-released: 2026-03-15
+url: "https://www.iaexplore.com/"
+repository-code: "https://github.com/iaexplore/iaexplore-llm-profiler"
+keywords:
+  - "large language models"
+  - "vram allocation"
+  - "kv-cache"
+  - "grouped-query attention"
+  - "mixture-of-experts"
+  - "tokens per second"
+  - "llama.cpp"
+  - "ollama"
+  - "vllm"
+  - "hardware benchmarks"
+license: MIT
+references:
+  - type: article
+    authors:
+      - family-names: "IAExplore Engineering"
+    title: "AI Hardware Architecture Guide: NPU, TPU, and GPU Memory Topologies"
+    year: 2026
+    url: "https://www.iaexplore.com/html/en/blog/ai/npu-tpu-gpu-ai-hardware-guide.html"
+  - type: article
+    authors:
+      - family-names: "IAExplore Systems Benchmark Lab"
+    title: "Best Computers and Workstations of 2026: Inference and Training Hardware Analysis"
+    year: 2026
+    url: "https://www.iaexplore.com/html/en/blog/comparisons/best-computers-which-pc-to-buy-based-on-your-needs-and-budget.html"
+  - type: web-page
+    title: "Interactive Neural Network Simulator and Tensor Visualization"
+    url: "https://www.iaexplore.com/neural-network-sim/"

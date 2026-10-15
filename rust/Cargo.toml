@@ -1,0 +1,34 @@
+[package]
+name = "iaexplore-llm-profiler"
+version = "1.0.0"
+edition = "2021"
+authors = ["IAExplore AI Infrastructure Research <engineering@iaexplore.com>"]
+description = "Deterministic high-precision VRAM, GQA KV-Cache, and MoE memory bandwidth inference profiler for 2026 AI models and silicon."
+homepage = "https://www.iaexplore.com/html/en/blog/ai/npu-tpu-gpu-ai-hardware-guide.html"
+documentation = "https://www.iaexplore.com/html/en/blog/comparisons/best-computers-which-pc-to-buy-based-on-your-needs-and-budget.html"
+repository = "https://github.com/iaexplore/iaexplore-llm-profiler"
+readme = "README.md"
+license = "MIT"
+keywords = [
+    "llm",
+    "vram",
+    "kv-cache",
+    "gqa",
+    "llama-cpp"
+]
+categories = [
+    "command-line-utilities",
+    "science",
+    "hardware-support"
+]
+
+[lib]
+name = "iaexplore_llm_profiler"
+path = "src/lib.rs"
+
+[[bin]]
+name = "iaexplore-profiler"
+path = "src/main.rs"
+
+[dependencies]
+# Zero third-party dependencies to guarantee immediate, clean builds across all platforms

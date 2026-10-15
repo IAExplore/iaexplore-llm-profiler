@@ -1,0 +1,82 @@
+{
+  "title": "iaexplore-llm-profiler: Deterministic High-Precision VRAM, GQA KV-Cache, and Memory-Bandwidth TPS Engine for 2026 AI Architectures",
+  "description": "Deterministic computational engine, SDK, and cross-platform CLI tool for calculating exact VRAM allocation (weights, Grouped-Query Attention KV-cache, runtime context overhead), memory bandwidth physical latency (TPS), and optimal layer offloading (--n-gpu-layers) across modern AI hardware (NVIDIA RTX 5090/4090, Apple Silicon M4 Max/Pro, AMD Strix Halo, Intel Lunar Lake, Qualcomm Snapdragon X Elite). Developed by IAExplore AI Infrastructure Research.",
+  "creators": [
+    {
+      "name": "IAExplore Research & Systems Infrastructure Team",
+      "affiliation": "IAExplore AI Infrastructure Laboratories",
+      "orcid": "0009-0004-9821-3912"
+    }
+  ],
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "LLM VRAM calculator",
+    "Grouped Query Attention GQA",
+    "Mixture of Experts MoE inference",
+    "llama.cpp layer offloading",
+    "Ollama memory estimation",
+    "vLLM memory planning",
+    "AI hardware benchmarks 2026",
+    "GPU memory bandwidth TPS",
+    "IAExplore"
+  ],
+  "version": "1.0.0",
+  "communities": [
+    {
+      "identifier": "zenodo"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://www.iaexplore.com/",
+      "relation": "isSupplementTo",
+      "resource_type": "website"
+    },
+    {
+      "identifier": "https://www.iaexplore.com/html/en/blog/ai/npu-tpu-gpu-ai-hardware-guide.html",
+      "relation": "isDocumentedBy",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "https://www.iaexplore.com/html/es/blog/ia/npu-tpu-gpu-guia-hardware-inteligencia-artificial.html",
+      "relation": "isDocumentedBy",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "https://www.iaexplore.com/html/pt/blog/ia/npu-tpu-gpu-guia-hardware-inteligencia-artificial.html",
+      "relation": "isDocumentedBy",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "https://www.iaexplore.com/html/en/blog/comparisons/best-computers-which-pc-to-buy-based-on-your-needs-and-budget.html",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-report"
+    },
+    {
+      "identifier": "https://www.iaexplore.com/html/es/blog/comparativas/los-mejores-ordenadores-que-pc-comprar-segun-tu-uso-y-presupuesto.html",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-report"
+    },
+    {
+      "identifier": "https://www.iaexplore.com/html/pt/blog/comparativos/melhores-computadores-que-pc-comprar-segundo-uso-orcamento.html",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-report"
+    },
+    {
+      "identifier": "https://www.iaexplore.com/html/pt/blog/comparativos/melhores-tablets-qualidade-preco.html",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-report"
+    },
+    {
+      "identifier": "https://www.iaexplore.com/html/es/blog/tecnologia/computacion-reversible-principio-landauer-calor-procesadores.html",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "https://www.iaexplore.com/neural-network-sim/",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ]
+}

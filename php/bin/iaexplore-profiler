@@ -1,0 +1,91 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+// Look for autoloader
+$autoloadFiles = [
+    __DIR__ . '/../vendor/autoload.php',
+    __DIR__ . '/../../../autoload.php',
+    __DIR__ . '/../src/LlmProfiler.php',
+];
+
+$loaded = false;
+foreach ($autoloadFiles as $file) {
+    if (file_exists($file)) {
+        require_once $file;
+        $loaded = true;
+        break;
+    }
+}
+
+if (!$loaded) {
+    fwrite(STDERR, "Error: Could not locate LlmProfiler class or autoload.php\n");
+    exit(1);
+}
+
+use IAExplore\LlmProfiler\LlmProfiler;
+
+$options = [
+    'model' => 'llama-3.3-70b',
+    'hardware' => 'rtx-4090-24gb',
+    'quant' => 'Q4_K_M',
+    'context' => null,
+    'batch_size' => 1,
+    'kv_bits' => 16.0,
+    'json' => false,
+    'list_models' => false,
+    'list_hardware' => false,
+];
+
+$args = array_slice($argv, 1);
+for ($i = 0; $i < count($args); $i++) {
+    $arg = $args[$i];
+    if ($arg === '--model' || $arg === '-m') {
+        $options['model'] = $args[++$i] ?? 'llama-3.3-70b';
+    } elseif ($arg === '--hardware' || $arg === '-hw') {
+        $options['hardware'] = $args[++$i] ?? 'rtx-4090-24gb';
+    } elseif ($arg === '--quant' || $arg === '-q') {
+        $options['quant'] = $args[++$i] ?? 'Q4_K_M';
+    } elseif ($arg === '--context' || $arg === '-c') {
+        $options['context'] = isset($args[++$i]) ? (int)$args[$i] : null;
+    } elseif ($arg === '--batch-size' || $arg === '-b') {
+        $options['batch_size'] = isset($args[++$i]) ? (int)$args[$i] : 1;
+    } elseif ($arg === '--kv-bits') {
+        $options['kv_bits'] = isset($args[++$i]) ? (float)$args[$i] : 16.0;
+    } elseif ($arg === '--json') {
+        $options['json'] = true;
+    } elseif ($arg === '--list-models') {
+        $options['list_models'] = true;
+    } elseif ($arg === '--list-hardware') {
+        $options['list_hardware'] = true;
+    }
+}
+
+if ($options['list_models']) {
+    echo "Available Pre-Configured Models:\n";
+    foreach (LlmProfiler::MODELS_DB as $k => $v) {
+        printf("  - %-22s | %s (%.2fB params, %s)\n", $k, $v['name'], $v['total_params_b'], $v['architecture']);
+    }
+    exit(0);
+}
+
+if ($options['list_hardware']) {
+    echo "Available 2026 Hardware Profiles:\n";
+    foreach (LlmProfiler::HARDWARE_DB as $k => $v) {
+        printf("  - %-30s | %-36s | %.1fGB VRAM | %.1f GB/s\n", $k, $v['name'], $v['vram_gb'], $v['bandwidth_gb_s']);
+    }
+    exit(0);
+}
+
+try {
+    $res = LlmProfiler::profileInference($options);
+    if ($options['json']) {
+        echo json_encode($res, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . "\n";
+    } else {
+        echo LlmProfiler::formatReport($res) . "\n";
+    }
+} catch (\Throwable $e) {
+    fwrite(STDERR, "Error during profiling: " . $e->getMessage() . "\n");
+    exit(1);
+}
