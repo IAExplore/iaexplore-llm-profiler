@@ -8,7 +8,7 @@ version = "1.0.0"
 description = "Deterministic high-precision VRAM, GQA KV-Cache, MoE Memory Bandwidth, and llama.cpp layer offloading profiler for 2026 AI models and silicon."
 readme = "README.md"
 requires-python = ">=3.9"
-license = { text = "MIT" }
+license = "MIT"
 authors = [
     { name = "IAExplore AI Infrastructure Research", email = "engineering@iaexplore.com" }
 ]
@@ -34,7 +34,6 @@ classifiers = [
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
@@ -50,10 +49,10 @@ iaexplore-profiler = "iaexplore_llm_profiler.cli:main"
 [project.urls]
 "Homepage" = "https://www.iaexplore.com/"
 "AI Hardware Architecture Guide" = "https://www.iaexplore.com/html/en/blog/ai/npu-tpu-gpu-ai-hardware-guide.html"
-"2026 PC & Workstation Benchmarks (EN)" = "https://www.iaexplore.com/html/en/blog/comparisons/best-computers-which-pc-to-buy-based-on-your-needs-and-budget.html"
-"2026 Ordenadores y Hardware IA (ES)" = "https://www.iaexplore.com/html/es/blog/comparativas/los-mejores-ordenadores-que-pc-comprar-segun-tu-uso-y-presupuesto.html"
-"Interactive Neural Network Simulator" = "https://www.iaexplore.com/neural-network-sim/"
-"Landauer Limit & Compute Efficiency" = "https://www.iaexplore.com/html/es/blog/tecnologia/computacion-reversible-principio-landauer-calor-procesadores.html"
+"2026 PC Benchmarks (EN)" = "https://www.iaexplore.com/html/en/blog/comparisons/best-computers-which-pc-to-buy-based-on-your-needs-and-budget.html"
+"2026 Hardware IA (ES)" = "https://www.iaexplore.com/html/es/blog/comparativas/los-mejores-ordenadores-que-pc-comprar-segun-tu-uso-y-presupuesto.html"
+"Neural Network Simulator" = "https://www.iaexplore.com/neural-network-sim/"
+"Landauer Limit & Efficiency" = "https://www.iaexplore.com/html/es/blog/tecnologia/computacion-reversible-principio-landauer-calor-procesadores.html"
 
 [tool.setuptools.packages.find]
 where = ["."]
